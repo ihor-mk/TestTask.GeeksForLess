@@ -7,9 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvc( option => 
     option.EnableEndpointRouting = false
     );
-//builder.Services.AddIdentity<User, IdentityRole>()
-    ////.AddEntityFrameworkStores<AppDbContext>()
-    //.AddDefaultTokenProviders();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
