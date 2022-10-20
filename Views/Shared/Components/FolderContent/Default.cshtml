@@ -1,0 +1,10 @@
+@model IEnumerable<Folder>
+
+    <div class="children-folders">
+        @foreach (var folder in Model){
+            <a class="folder" asp-action="Folder" asp-route-id="@folder.Id">
+                @folder.Title
+            </a>
+        }
+    </div>
+    

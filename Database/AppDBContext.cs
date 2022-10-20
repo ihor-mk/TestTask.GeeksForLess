@@ -6,7 +6,9 @@ namespace GFL.TestTask.Database
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions options) : base(options)
-        { }
+        { 
+            Database.EnsureCreated();
+        }
         public DbSet<Folder> Folders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
