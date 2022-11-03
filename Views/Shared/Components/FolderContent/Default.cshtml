@@ -2,9 +2,12 @@
 
     <div class="children-folders">
         @foreach (var folder in Model){
-            <a class="folder" asp-action="Folder" asp-route-id="@folder.Id">
+            <a class="folder" asp-action="Folder" asp-route-id="@folder.Title">
                 @folder.Title
             </a>
         }
     </div>
+
+
+    
     
